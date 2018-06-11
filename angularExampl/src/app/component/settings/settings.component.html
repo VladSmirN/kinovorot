@@ -1,0 +1,41 @@
+ <nav class=" grey darken-2"> 
+
+  <div class ="container">
+  
+    <div class="nav-wrapper">
+	
+      <a  class="brand-logo center" >Настройки </a>
+	  
+	  <a routerLink=""  class=" left"><i class="material-icons" (click)="saveFilmParametr()">arrow_back</i></a>
+	 
+	  
+      
+    </div>
+	
+  </div>
+  
+</nav>
+ <div class="container">
+   <div id="conteinerRating">
+     <h5 class="center-align">Рейтинг сериалов  по  кинопоиску   будет  в интервале </h5>
+     <h5 class="center-align">
+       ( {{filmsFilterParametr.ratingKinopoisk[0]}} -
+       {{filmsFilterParametr.ratingKinopoisk[1]}} )
+      </h5>
+	  <nouislider [config]="someKeyboardConfig" [(ngModel)]="filmsFilterParametr.ratingKinopoisk"></nouislider> 
+    </div>
+	
+	
+   <div id="conteinerRating">
+     <h5 class="center-align">Рейтинг сериалов  по  Imdb  будет  в интервале </h5>
+     <h5 class="center-align">
+       ( {{filmsFilterParametr.ratingImdb[0]}} -
+       {{filmsFilterParametr.ratingImdb[1]}} )
+     </h5>
+     <nouislider [config]="someKeyboardConfig" [(ngModel)]="filmsFilterParametr.ratingImdb"></nouislider>
+   </div>
+
+  <div id ="content" >
+  </div>
+  
+ </div>

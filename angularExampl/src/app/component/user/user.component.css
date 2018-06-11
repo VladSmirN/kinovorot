@@ -1,0 +1,38 @@
+
+.card{
+  padding-top: 10px;
+  
+ 
+}
+.marced{
+  color:red;
+  font-weight:bold;
+}
+.hover{
+  transform:scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  transition: .5s  all;
+}
+.hover:active{
+  outline:none;
+}
+img{
+    object-fit: cover;
+    width: 300px;
+    height: 150px;
+	overflow: hidden;
+	
+	
+}
+.hide-on-large-only .card-content{
+	height:130px;
+	overflow: hidden;
+	
+	
+}
+.hide-on-med-and-down .card-content{
+	height:90px;
+	overflow: hidden;
+	
+	
+}

@@ -1,0 +1,44 @@
+
+ <nav class=" grey darken-2">
+
+  <div class ="container">
+  
+    <div class="nav-wrapper ">
+	
+      <a  class="brand-logo center" >Расписание </a>
+	 
+	  <a routerLink="settings"  class=" right"><i class="material-icons">settings</i></a>
+	  
+	 <!-- <a routerLink=""  class="brand-logo left"><img  src="../../../assets/images/movie-projector1.png" height="40px"></a> -->
+    <a routerLink=""  class="brand-logo left"><img  src="assets/images/movie-projector1.png" height="40px"></a>
+    </div>
+	
+  </div>
+  
+</nav>
+
+<app-load  *ngIf="showLoad" ></app-load>
+		
+
+<div class ="container">
+	
+   <app-day *ngFor ="let i  of users"  [days] = "i"  ></app-day>
+	  
+   <div class="row">
+		
+     <div id = "error" class="col s3 offset-s5" *ngIf="showError">{{error}}	</div>
+	 
+	 <div id="containertBtn">
+	 
+       <div class="col s3 offset-s5"> 
+
+         <a (click)="onClick()"class="waves-effect waves-light btn "  *ngIf="!showLoad" >показать еще</a>
+		
+	   </div>
+		
+     </div>
+	 
+   </div>
+  
+</div>
+   

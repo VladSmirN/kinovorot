@@ -1,0 +1,7 @@
+<h5 *ngIf="(days.result|filmsFilter:filmsFilterParametr).length">
+  {{week}} &bull; {{dayNomber+" "+mounth}}
+</h5>
+<div class="row">
+  <app-user *ngFor ="let j  of days.result|filmsFilter:filmsFilterParametr" [films] = j ></app-user>
+</div> 
+		 

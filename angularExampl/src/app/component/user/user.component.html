@@ -1,0 +1,47 @@
+
+ <div class="col s6 m3"   >
+  <div class="hide-on-large-only">
+      <div appHover class="card  " size = "100%" [routerLink]="['aboutFilm',films.id ]" (click)="saveScroll()">
+        <div class="card-image" >
+		
+          <img src={{imageSrc}} >
+		
+          <span class="card-title"></span>
+        </div>
+		  
+        <div class="card-content" >
+		
+		 <p><span class = "grey-text text-darken-4" >{{films.name}}</span> </p>
+          <p><span class = " grey-text text-darken-1
+" >{{films.season}}  сезон 	&nbsp;
+  {{films.series}} серия 
+		  </span> </p>
+        </div>   
+    
+      </div>
+	   </div>
+	  <div class="hide-on-med-and-down">
+      <div appHover class="card  " size = "100%" [routerLink]="['aboutFilm',films.id ]" (click)="saveScroll()">
+        <div class="card-image" >
+		
+          <img src={{imageSrc}} >
+		
+          <span class="card-title"></span>
+        </div>
+		  
+        <div class="card-content" >
+		
+		 <p><span class = "grey-text text-darken-4" >{{films.name}}</span> </p>
+          <p><span class = " grey-text text-darken-1
+" >{{films.season}}  сезон 	&nbsp;
+  {{films.series}} серия 
+		  </span> </p>
+        </div>   
+    
+      </div>
+	   </div>
+    </div>
+	
+
+          
+	 

@@ -1,0 +1,59 @@
+<nav class=" grey darken-2">
+
+  <div class ="container">
+  
+    <div class="nav-wrapper">
+	
+      <a  class="brand-logo center" >О сериале </a>
+	  
+	  <a routerLink=""  class="left"><i class="material-icons">arrow_back</i></a>
+	  
+	    <a routerLink="/settings"  class=" right"><i class="material-icons">settings</i></a>
+	  
+      
+    </div>
+	
+  </div>
+  
+</nav>
+
+<div class ="container">
+
+	<app-load  *ngIf="showLoad"></app-load>
+
+	<div *ngIf="!showLoad" >
+
+	 
+	  <div class ="row">
+
+		  <div class = " col s12  flow-text">{{aboutFilm.name}}</div>
+		  
+		  <img src ={{aboutFilm.imageSrc}} class = "col s12  m6">
+		  
+		  
+		  <div class = "col   s12 "> <span class="grey-text text-darken-1">год выпуска:</span> {{aboutFilm.year}}</div>
+		  
+		  
+		  <div class = "col  s12 "><span class="grey-text text-darken-1">страна :</span> {{aboutFilm.country}}</div>
+		   
+		   
+		  <div class = "col s12 "><span class="grey-text text-darken-1">рейтинг кинопоиска : </span>{{aboutFilm.ratingKinopoisk}}</div>
+		   
+		   
+		  <div class = "col  s12"><span class="grey-text text-darken-1">рейтинг IMDb :</span>{{aboutFilm.ratingImdb}}</div>
+			 
+		  <div class = "col s12 "><span class="grey-text text-darken-1">жанр : </span>{{aboutFilm.genre}}</div>
+			
+		   <!--<div class = "col s12 "><span class="grey-text text-darken-1">актеры : </span> <span *ngFor ="let j of aboutFilm.actor">{{[j]}}  </span></div>-->
+		   
+		  <div class = "col s12 m12"><span class="grey-text text-darken-1">Описание :</span>{{aboutFilm.about}}</div>
+			
+			    
+	  </div>
+	  
+	</div>
+	  
+	<div id ="content" >
+	</div>
+	  
+</div>
