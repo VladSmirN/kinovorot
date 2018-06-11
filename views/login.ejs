@@ -1,0 +1,76 @@
+
+<% layout("./layout/page"); %>
+
+ <div class="container">
+    <div class="row">
+    <form class="col s12">
+     
+   
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="lvl" class="materialize-textarea"></textarea>
+          <label for="lvl">lvl</label>
+        </div>
+      </div>
+ 
+	  
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="password" type="password" class="validate">
+          <label for="password">Password</label>
+        </div>
+      </div>
+      
+     
+    </form> 
+	
+  </div>
+  <a class="waves-effect waves-light btn" id = "btn1">button</a>
+  
+</div>
+<div class="g-recaptcha" data-sitekey="6Ld-RlsUAAAAAEWVdMwqJe6AE7ffack8-a2iRJLy"></div>
+<div id="result_form">
+</div>
+<script type="text/javascript" language="javascript">
+$( document ).ready(function() {
+
+   
+    $("#btn1").click(  function(){
+		 var dataUs = {
+		lvl:$("#lvl").val(),
+		pas:$("#password").val(),
+		captcha: grecaptcha.getResponse()
+		}
+		$.ajax({
+        url:     "/login", 
+        type:     "POST", 
+		
+		//contentType: "application/json; charset=utf-8",
+        //dataType: "json",
+        //dataType: "json", 
+        data: /*JSON.stringify(dataUs)*/dataUs,
+       success: function(response) { //Данные отправлены успешно
+        	if(response =="1"){
+				window.location.href ="/lvl"+dataUs.lvl ;
+				
+				/*$.ajax({
+                url: "/lvl"+dataUs.lvl, 
+                type:"GET",
+  				success:function(){f=>{}}
+			});*/
+			}
+			else
+        	$('#result_form').html("пароль  неверный");
+    	},
+    	error: function(response) { // Данные не отправлены
+            $('#result_form').html('Ошибка. Данные не отправлены.');
+    	} /**/ 
+		
+		
+ 	   });
+		
+		
+		}
+	);
+});
+</script>
